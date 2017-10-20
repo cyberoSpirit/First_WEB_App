@@ -1,0 +1,9 @@
+#Comment
+
+*.dll
+*.suo
+*.dll
+*.pdb
+*.CopyComplete
+*.CoreCompileInputs.c
+/.vs
