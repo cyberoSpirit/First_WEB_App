@@ -1,9 +1,14 @@
 #Comment
 
+#Ignore all files with extentions:
 *.dll
 *.suo
 *.dll
 *.pdb
 *.CopyComplete
 *.CoreCompileInputs.c
-/.vs
+
+
+#Ignore all bin and obj folders
+bin/
+obj/
