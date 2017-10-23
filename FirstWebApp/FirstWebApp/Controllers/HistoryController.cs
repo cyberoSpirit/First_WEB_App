@@ -6,17 +6,11 @@ using System.Web.Mvc;
 
 namespace FirstWebApp.Controllers
 {
-    public class HomeController : Controller
+    public class HistoryController : Controller
     {
+        // GET: History
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

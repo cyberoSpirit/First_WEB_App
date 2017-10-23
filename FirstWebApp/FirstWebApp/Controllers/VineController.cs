@@ -8,27 +8,19 @@ using System.Web.Mvc;
 
 namespace FirstWebApp.Controllers
 {
-    public class MoviesController : Controller
+    public class VineController : Controller
     {
-        ///// <summary>
-        ///// GET: Movies/Random
-        ///// </summary>
-        ///// <returns>Object of Movie view with castomization (use for returning of Action subtypes) </returns>
-        //public ActionResult Random()
-        //{
-        //    var movie = new Movie() { Name = "Shreck" };
-        //    //return View(movie);
-        //    //return Content("Hello world!");
-        //    //return HttpNotFound();
-        //    //return RedirectToAction("Index", "Home", new { page = 1, sortby = "name" });
-        //    //return new EmptyResult();
-        //}
+        public ActionResult Index()
+        {
+            ViewBag.Message = "Vine content";
+            return View();
+        }
 
         /// <summary>
-        /// GET: Movies/Random
+        /// GET: Vine/Random
         /// </summary>
         /// <returns>Object of Movie view without needless casting</returns>
-        public ViewResult Random()
+        public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shreck" };
             var customers = new List<Customer>
@@ -58,37 +50,38 @@ namespace FirstWebApp.Controllers
             return Content("id=" + id);
         }
 
+        ///// <summary>
+        ///// Navigate to Movies
+        ///// </summary>
+        ///// <param name="pageIndex"></param>
+        ///// <param name="sortBy"></param>
+        ///// <returns></returns>
+        //public ActionResult Index(int? pageIndex, string sortBy)
+        //{
+        //    if(!pageIndex.HasValue)
+        //    {
+        //        pageIndex = 1;
+        //    }
+
+        //    if(string.IsNullOrWhiteSpace(sortBy))
+        //    {
+        //        sortBy = "Name";
+        //    }
+        //    ViewBag.Message = String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy);
+        //    return View();
+        //}
+
         /// <summary>
-        /// Navigate to Movies
-        /// </summary>
-        /// <param name="pageIndex"></param>
-        /// <param name="sortBy"></param>
-        /// <returns></returns>
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if(!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
-
-            if(string.IsNullOrWhiteSpace(sortBy))
-            {
-                sortBy = "Name";
-            }
-
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
-        }
-
-        /// <summary>
-        /// Return content for movies/released/2014/03 and fails if year number has no 4 digits or month number has no 2 digits or is not in range of 1 - 12
+        /// Return content for vines/released/2014/03 and fails if year number has no 4 digits or month number has no 2 digits or is not in range of 1 - 12
         /// </summary>
         /// <param name="year">Year number must have 4 digits</param>
         /// <param name="month">Month number must have 2 digits and be in range of 1 - 12</param>
         /// <returns></returns>
-        [Route("movies/released/{year:regex(\\d{4})}/{month:regex(\\d{2}):range(1,12)}")]
+        [Route("vine/released/{year:regex(\\d{4})}/{month:regex(\\d{2}):range(1,12)}")]
         public ActionResult ByReleaseDate(int year, int month)
         {
-            return Content(year + "/" + month);
+            ViewBag.Message = Content(year + "/" + month);
+            return View();
         }
 
     }
