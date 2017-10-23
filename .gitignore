@@ -12,4 +12,6 @@
 #Ignore all bin and obj folders
 bin/
 obj/
+
+# Visual Studio 2015 cache/options directory
 .vs/
