@@ -199,7 +199,7 @@
     <Content Include="Views\Vine\Random.cshtml" />
     <Content Include="Views\Shared\_NavigationBar.cshtml" />
     <Content Include="Views\History\ManufactureList.cshtml" />
-    <Content Include="Views\Manufacturer\ManufacturerIndex.cshtml" />
+    <Content Include="Views\Manufacturer\ManufactureDetails.cshtml" />
     <Content Include="Views\Vine\Vine.cshtml" />
     <Content Include="Views\Vine\Index.cshtml" />
     <Content Include="Views\Manufacturer\AllManufacturers.cshtml" />

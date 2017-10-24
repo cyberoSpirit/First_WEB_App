@@ -38,7 +38,7 @@ namespace FirstWebApp.Controllers
             return View(ManufacturersVM);
         }
 
-        public ActionResult ManufacturerIndex(int Id)
+        public ActionResult ManufactureDetails(int Id)
         {
             ViewBag.Message = "Your contact page.";
             return View(ManufacturersVM.Manufacturers.SingleOrDefault(x => x.Id == Id));

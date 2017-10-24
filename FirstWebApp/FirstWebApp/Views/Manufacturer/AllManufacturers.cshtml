@@ -19,7 +19,7 @@
             @foreach (var manufacturer in Model.Manufacturers)
             {
                 <tr>
-                    <th>@Html.ActionLink(@manufacturer.Name, "ManufacturerIndex", "Manufacturer", new { id = manufacturer.Id }, null)</th>
+                    <th>@Html.ActionLink(@manufacturer.Name, "ManufactureDetails", "Manufacturer", new { id = manufacturer.Id }, null)</th>
                 </tr>
             }
         </table>
