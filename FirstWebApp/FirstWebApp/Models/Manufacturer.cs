@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FirstWebApp.Models
 {
-    public class Manufacturer
+    public class Manufacturer : IModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

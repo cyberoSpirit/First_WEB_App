@@ -4,7 +4,7 @@
 }
 
 <div class="row">
-    "Manufacturers :)"
+    <h2>Manufacturers</h2>
     <p/>
     @if (Model.Manufacturers.Count == 0)
     {
@@ -13,10 +13,13 @@
     else
     {
         <table class=“table table-bordered table-hover”>
+            <tr>
+                <th>Manufacturer</th>
+            </tr>
             @foreach (var manufacturer in Model.Manufacturers)
             {
                 <tr>
-                    <th> @manufacturer.Name</th>
+                    <th>@Html.ActionLink(@manufacturer.Name, "ManufacturerIndex", "Manufacturer", new { id = manufacturer.Id }, null)</th>
                 </tr>
             }
         </table>
