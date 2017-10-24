@@ -1,0 +1,38 @@
+﻿@model FirstWebApp.ViewModels.ManufacturersViewModel
+@{
+    ViewBag.Title = "Manufacturers";
+}
+
+<div class="row">
+    "Manufacturers :)"
+    <p/>
+    @if (Model.Manufacturers.Count == 0)
+    {
+        <text>There is no any manufacturer.</text>
+    }
+    else
+    {
+        <table class=“table table-bordered table-hover”>
+            @foreach (var manufacturer in Model.Manufacturers)
+            {
+                <tr>
+                    <th> @manufacturer.Name</th>
+                </tr>
+            }
+        </table>
+    }
+   
+</div>
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>*@
