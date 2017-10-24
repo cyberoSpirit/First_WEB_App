@@ -199,6 +199,8 @@
     <Content Include="Views\Manufacturer\Manufacturer.cshtml" />
     <Content Include="Views\Vine\Vine.cshtml" />
     <Content Include="Views\Vine\Index.cshtml" />
+    <Content Include="Views\Manufacturer\Index.cshtml" />
+    <Content Include="Views\History\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
