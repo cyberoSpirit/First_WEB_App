@@ -1,0 +1,13 @@
+Start working with EntityFramework. 
+Type in Package Manager Console:
+	Run: Install-Package EntityFramework -IncludePrereleaseInstall-Package EntityFramework -IncludePrerelease
+	Restart Visual Studio
+	Add file: IndentityModels.cs
+	Run: install-package Microsoft.Aspnet.Identity.EntityFramework
+	Run: enable-migrations
+	Run: add-migration <Name>   (add-migration InitialModel)
+
+For adding changes to InitialModel, run:
+	Add-Migration InitialModel -force
+For updating DB, run:
+	update-database
