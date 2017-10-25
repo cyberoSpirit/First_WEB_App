@@ -8,5 +8,6 @@ namespace FirstWebApp.Models
     public class Vine
     {
         public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

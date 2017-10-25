@@ -1,20 +1,30 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<FirstWebApp.Models.Vine>
+
+@{
+    ViewBag.Title = "Vines";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row">
-    "Hefgdfgldnfglkglmfk';fmkn;fmflmgow :)"
-</div>
-
-@*<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>*@
+<h2>@ViewBag.Title</h2>
+@if (!Model.Any())
+{
+    <p>We don't have any vines yet.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Vine</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vine in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(@vine.Name, "Details", "Vine", new { id = vine.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

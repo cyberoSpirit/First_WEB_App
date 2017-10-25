@@ -10,10 +10,29 @@ namespace FirstWebApp.Controllers
 {
     public class VineController : Controller
     {
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            ViewBag.Message = "Vine content";
-            return View();
+            var vines = GetVines();
+            return View(vines);
+        }
+
+        public ActionResult Details(int Id)
+        {
+            var vine = GetVines().SingleOrDefault(m => m.Id == Id);
+            if (vine == null)
+            {
+                return HttpNotFound();
+            }
+            return View(vine);
+        }
+
+        private IEnumerable<Vine> GetVines()
+        {
+            return new List<Vine>
+            {
+                new Vine() { Id = 1, Name = "Bull's Heart" },
+                new Vine() { Id = 2, Name = "New Love" }
+            };
         }
 
         /// <summary>
@@ -34,42 +53,9 @@ namespace FirstWebApp.Controllers
                 Movie = movie,
                 Customers = customers
             };
-            //var viewResult = new ViewResult(); //this two lines equals to ...
-            //viewResult.ViewData.Model = movie;
-            //return View(movie); //... this one
+
             return View(viewModel);
         }
-
-        /// <summary>
-        /// If parameter will be movieId it will work only for Movies/Edit?movieId=1 case because of routing configuration.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>Show id=id(passed number) (works for both Movies/Edit/1 and Movies/Edit?id=1)</returns>
-        public ActionResult Edit(int id)
-        {
-            return Content("id=" + id);
-        }
-
-        ///// <summary>
-        ///// Navigate to Movies
-        ///// </summary>
-        ///// <param name="pageIndex"></param>
-        ///// <param name="sortBy"></param>
-        ///// <returns></returns>
-        //public ActionResult Index(int? pageIndex, string sortBy)
-        //{
-        //    if(!pageIndex.HasValue)
-        //    {
-        //        pageIndex = 1;
-        //    }
-
-        //    if(string.IsNullOrWhiteSpace(sortBy))
-        //    {
-        //        sortBy = "Name";
-        //    }
-        //    ViewBag.Message = String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy);
-        //    return View();
-        //}
 
         /// <summary>
         /// Return content for vines/released/2014/03 and fails if year number has no 4 digits or month number has no 2 digits or is not in range of 1 - 12
