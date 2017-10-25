@@ -10,38 +10,30 @@ namespace FirstWebApp.Controllers
 {
     public class ManufacturerController : Controller
     {
-        private ManufacturersViewModel manufacturersVM;
-
-        public ManufacturerController()
-        {
-            var manufacturers = new List<Manufacturer>();
-            manufacturers.Add(new Manufacturer() { Id = 1, Name = "Karl Shosh" });
-            manufacturers.Add(new Manufacturer() { Id = 2, Name = "Shabo" });
-
-            manufacturersVM = new ManufacturersViewModel()
-            {
-                Manufacturers = manufacturers
-            };
-        }
-
-        public ManufacturersViewModel ManufacturersVM
-        {
-            get
-            {
-                return manufacturersVM;
-            }
-        }
         // GET: Manufacturers
-        public ActionResult AllManufacturers()
+        public ViewResult Index()
         {
-            ViewBag.Message = "Your contact page.";
-            return View(ManufacturersVM);
+            var manufacturers = GetManufacturers();
+            return View(manufacturers);
         }
 
-        public ActionResult ManufactureDetails(int Id)
+        public ActionResult Details(int Id)
         {
-            ViewBag.Message = "Your contact page.";
-            return View(ManufacturersVM.Manufacturers.SingleOrDefault(x => x.Id == Id));
+            var manufacturer = GetManufacturers().SingleOrDefault(m => m.Id == Id);
+            if(manufacturer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(manufacturer);
+        }
+
+        private IEnumerable<Manufacturer> GetManufacturers()
+        {
+            return new List<Manufacturer>
+            {
+                new Manufacturer() { Id = 1, Name = "Karl Shosh" },
+                new Manufacturer() { Id = 2, Name = "Shabo" }
+            };
         }
     }
 }
