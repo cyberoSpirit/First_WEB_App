@@ -11,3 +11,6 @@ For adding changes to InitialModel, run:
 	Add-Migration InitialModel -force
 For updating DB, run:
 	update-database
+For reverting update:
+	Run: Update-Database -TargetMigration:NameOfUpdateWhichshouldBeTheLastAfterUpgrade -Force
+		Update-Database -TargetMigration:AddIsSubscribedToNewsLetter -Force

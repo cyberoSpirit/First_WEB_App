@@ -165,10 +165,27 @@
     <Compile Include="Migrations\201710251112392_InitialModel.Designer.cs">
       <DependentUpon>201710251112392_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710251243130_AddIsSubscribedToNewsLetter.cs" />
+    <Compile Include="Migrations\201710251243130_AddIsSubscribedToNewsLetter.Designer.cs">
+      <DependentUpon>201710251243130_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710251442053_AddMemberShipType.cs" />
+    <Compile Include="Migrations\201710251442053_AddMemberShipType.Designer.cs">
+      <DependentUpon>201710251442053_AddMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710251442333_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201710251442333_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201710251442333_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710251451008_ApplyAnnotationToManufacturerName.cs" />
+    <Compile Include="Migrations\201710251451008_ApplyAnnotationToManufacturerName.Designer.cs">
+      <DependentUpon>201710251451008_ApplyAnnotationToManufacturerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\Vine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -241,6 +258,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710251112392_InitialModel.resx">
       <DependentUpon>201710251112392_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251243130_AddIsSubscribedToNewsLetter.resx">
+      <DependentUpon>201710251243130_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251442053_AddMemberShipType.resx">
+      <DependentUpon>201710251442053_AddMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251442333_PopulateMembershipTypes.resx">
+      <DependentUpon>201710251442333_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251451008_ApplyAnnotationToManufacturerName.resx">
+      <DependentUpon>201710251451008_ApplyAnnotationToManufacturerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
