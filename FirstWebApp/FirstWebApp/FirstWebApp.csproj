@@ -214,6 +214,18 @@
     <Compile Include="Migrations\201710271351416_AddBirthdayDatesForPersons.Designer.cs">
       <DependentUpon>201710271351416_AddBirthdayDatesForPersons.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710271422051_FillManufacturersTableWithSomeData.cs" />
+    <Compile Include="Migrations\201710271422051_FillManufacturersTableWithSomeData.Designer.cs">
+      <DependentUpon>201710271422051_FillManufacturersTableWithSomeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710271551210_AddVineSugarAndAlcoholProperties.cs" />
+    <Compile Include="Migrations\201710271551210_AddVineSugarAndAlcoholProperties.Designer.cs">
+      <DependentUpon>201710271551210_AddVineSugarAndAlcoholProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710271553393_FillVineSugarAndAlcoholProperties.cs" />
+    <Compile Include="Migrations\201710271553393_FillVineSugarAndAlcoholProperties.Designer.cs">
+      <DependentUpon>201710271553393_FillVineSugarAndAlcoholProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -306,6 +318,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710271351416_AddBirthdayDatesForPersons.resx">
       <DependentUpon>201710271351416_AddBirthdayDatesForPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710271422051_FillManufacturersTableWithSomeData.resx">
+      <DependentUpon>201710271422051_FillManufacturersTableWithSomeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710271551210_AddVineSugarAndAlcoholProperties.resx">
+      <DependentUpon>201710271551210_AddVineSugarAndAlcoholProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710271553393_FillVineSugarAndAlcoholProperties.resx">
+      <DependentUpon>201710271553393_FillVineSugarAndAlcoholProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
