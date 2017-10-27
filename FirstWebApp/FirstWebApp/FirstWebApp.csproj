@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201710261223561_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201710261223561_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710271351416_AddBirthdayDatesForPersons.cs" />
+    <Compile Include="Migrations\201710271351416_AddBirthdayDatesForPersons.Designer.cs">
+      <DependentUpon>201710271351416_AddBirthdayDatesForPersons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -299,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710261223561_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201710261223561_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710271351416_AddBirthdayDatesForPersons.resx">
+      <DependentUpon>201710271351416_AddBirthdayDatesForPersons.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -5,4 +5,15 @@
 }
 
 <h2>@Model.Name</h2>
+@if (!Model.IsCompany)
+{
+    if (Model.BirtdayDate.HasValue)
+    {
+    <li>@Model.BirtdayDate.Value.Date</li>
+    }
+    else
+    {
+        <p>Date of Birth was not provided.</p>
+    }
+}
 
