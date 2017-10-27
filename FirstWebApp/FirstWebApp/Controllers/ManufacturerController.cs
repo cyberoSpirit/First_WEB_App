@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using FirstWebApp.Models;
+using System.Data.Entity;
 using System.Collections.Generic;
+using FirstWebApp.Models.IdentityModels;
 
 namespace FirstWebApp.Controllers
 {
@@ -21,27 +22,18 @@ namespace FirstWebApp.Controllers
         // GET: Manufacturers
         public ViewResult Index()
         {
-            var manufacturers = GetManufacturers();
+            var manufacturers = _context.Manufacturers.Include(c => c.MembershipType).ToList();
             return View(manufacturers);
         }
 
         public ActionResult Details(int Id)
         {
-            var manufacturer = GetManufacturers().SingleOrDefault(m => m.Id == Id);
+            var manufacturer = _context.Manufacturers.SingleOrDefault(m => m.Id == Id);
             if(manufacturer == null)
             {
                 return HttpNotFound();
             }
             return View(manufacturer);
-        }
-
-        private IEnumerable<Manufacturer> GetManufacturers()
-        {
-            return new List<Manufacturer>
-            {
-                new Manufacturer() { Id = 1, Name = "Karl Shosh" },
-                new Manufacturer() { Id = 2, Name = "Shabo" }
-            };
         }
     }
 }

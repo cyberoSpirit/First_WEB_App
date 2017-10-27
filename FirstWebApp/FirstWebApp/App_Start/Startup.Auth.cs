@@ -5,7 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using FirstWebApp.Models;
+using FirstWebApp.Models.IdentityModels;
 
 namespace FirstWebApp.App_Data
 {

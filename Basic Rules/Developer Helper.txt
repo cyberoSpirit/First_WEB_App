@@ -14,19 +14,3 @@ For updating DB, run:
 For reverting update:
 	Run: Update-Database -TargetMigration:NameOfUpdateWhichshouldBeTheLastAfterUpgrade -Force
 		Update-Database -TargetMigration:AddIsSubscribedToNewsLetter -Force
-
-
-Sql("INSERT INTO MemberShipTypes (Type, SoldItemsCount, Discount) VALUES ('Junior', 10, 0)");
-            Sql("INSERT INTO MemberShipTypes (Type, SoldItemsCount, Discount) VALUES ('Qualified', 1000, 5)");
-            Sql("INSERT INTO MemberShipTypes (Type, SoldItemsCount, Discount) VALUES ('Professional', 10000, 10)");
-
-[Required]
-        [StringLength(300)]
-
-public class MembershipType
-    {
-        public int Id { get; set; }
-        public string Type { get; set; }
-        public int SoldItemsCount { get; set; }
-        public int Discount { get; set; }
-    }
