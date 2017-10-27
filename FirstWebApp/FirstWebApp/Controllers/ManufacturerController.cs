@@ -15,7 +15,7 @@ namespace FirstWebApp.Controllers
         }
         protected override void Dispose(bool disposing)
         {
-            _context.Dispose(disposing);
+            _context.Dispose();
         }
 
         // GET: Manufacturers
