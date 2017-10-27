@@ -1,15 +1,23 @@
-﻿using FirstWebApp.Models;
-using FirstWebApp.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
+using FirstWebApp.Models;
+using System.Collections.Generic;
 
 namespace FirstWebApp.Controllers
 {
     public class ManufacturerController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public ManufacturerController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose(disposing);
+        }
+
         // GET: Manufacturers
         public ViewResult Index()
         {

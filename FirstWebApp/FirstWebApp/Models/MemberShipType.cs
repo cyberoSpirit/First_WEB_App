@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FirstWebApp.Models
 {
-    public class MemberShipType
+    public class MembershipType
     {
         public int Id { get; set; }
         public string Type { get; set; }
